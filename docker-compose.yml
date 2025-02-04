@@ -7,12 +7,12 @@ services:
     volumes:
       - ./mosquitto.conf:/mosquitto/config/mosquitto.conf
       - ./logs:/mosquitto/log
-      - mosquitto-data:/mosquitto/data
+      - data:/mosquitto/data
     networks:
       - network
 networks:
   network:
     driver: bridge
 volumes:
-  mosquitto-data:
+  data:
     driver: local
