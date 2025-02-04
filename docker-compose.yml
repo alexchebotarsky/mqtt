@@ -1,7 +1,6 @@
 services:
   mosquitto:
     image: eclipse-mosquitto:2.0.20
-    container_name: mosquitto
     restart: on-failure
     ports:
       - "1883:1883"
@@ -10,9 +9,9 @@ services:
       - ./logs:/mosquitto/log
       - mosquitto-data:/mosquitto/data
     networks:
-      - pubsub
+      - network
 networks:
-  pubsub:
+  network:
     driver: bridge
 volumes:
   mosquitto-data:
