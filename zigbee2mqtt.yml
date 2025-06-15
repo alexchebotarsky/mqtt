@@ -1,0 +1,16 @@
+version: 4
+mqtt:
+  base_topic: zigbee2mqtt
+  server: mqtt://mosquitto:1883
+advanced:
+  log_level: info
+frontend:
+  enabled: true
+  port: 8080
+homeassistant:
+  enabled: false
+serial:
+  port: /dev/ttyUSB0
+  adapter: zstack
+  baudrate: 115200
+  rtscts: false

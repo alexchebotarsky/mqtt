@@ -1,19 +1,19 @@
-# mosquitto
+# mqtt
 
 ### Installation
 
-- Add custom systemctl service in `/etc/systemd/system/mosquitto.service`:
+- Add custom systemctl service in `/etc/systemd/system/mqtt.service`:
 
   ```
   [Unit]
-  Description=Mosquitto
+  Description=MQTT
   After=network.target docker.service
   Requires=docker.service
 
   [Service]
   Type=simple
   User=USER_NAME_HERE
-  WorkingDirectory=/path/to/mosquitto
+  WorkingDirectory=/path/to/mqtt
   ExecStart=docker compose up
   ExecStop=docker compose down
   Restart=on-failure
@@ -27,5 +27,5 @@
   Then enable the service to run on startup:
 
   ```
-  sudo systemctl enable mosquitto.service
+  sudo systemctl enable mqtt.service
   ```
