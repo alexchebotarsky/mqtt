@@ -10,7 +10,7 @@ services:
     networks:
       - network
   zigbee2mqtt:
-    image: koenkk/zigbee2mqtt:2.6.0
+    image: koenkk/zigbee2mqtt:2.14.2
     restart: on-failure
     environment:
       - TZ=Europe/Oslo
